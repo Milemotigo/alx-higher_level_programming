@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# 1-calculator.py
 
 if __name__ == "__main__":
     """print the sum, difference, multiple and quotient of 10 and 5."""
