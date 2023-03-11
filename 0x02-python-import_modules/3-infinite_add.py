@@ -1,14 +1,6 @@
-#!/usr/bin/python
-if __name__=='__main__':
-    
-    import sys
-    
-    args = sys.argv[1:]
-    
-    total = 0
-    
-    for arg in args:
-    
-        total += int(arg)
-    
-    print(total)
+#!/usr/bin/python3
+from sys import argv
+add = 0
+for s in argv[1:]:
+    add += int(s)
+print("{:d}".format(add))
