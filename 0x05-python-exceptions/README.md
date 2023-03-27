@@ -1,0 +1,4 @@
+EXCEPTION
+try:
+except:
+finally
