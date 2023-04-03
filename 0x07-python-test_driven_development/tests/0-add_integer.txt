@@ -1,0 +1,33 @@
+# Test case 1: adding two integers
+result = add_integer(2, 3)
+assert result == 5, f"Expected 5, but got {result}"
+
+# Test case 2: adding an integer and a float
+result = add_integer(2, 3.5)
+assert result == 5, f"Expected 5, but got {result}"
+
+# Test case 3: adding two floats
+result = add_integer(2.5, 3.5)
+assert result == 6, f"Expected 6, but got {result}"
+
+# Test case 4: using default value of b
+result = add_integer(2)
+assert result == 100, f"Expected 100, but got {result}"
+
+# Test case 5: a is not an integer or a float
+try:
+    add_integer("2", 3)
+except TypeError as e:
+    assert str(e) == "a must be an integer or float", f"Expected 'a must be an integer or float', but got {e}"
+
+# Test case 6: b is not an integer or a float
+try:
+    add_integer(2, "3")
+except TypeError as e:
+    assert str(e) == "b must be an integer or float", f"Expected 'b must be an integer or float', but got {e}"
+
+# Test case 7: a and b are not integers or floats
+try:
+    add_integer("2", "3")
+except TypeError as e:
+    assert str(e) == "a must be an integer or float", f"Expected 'a must be an integer or float', but got {e}"
