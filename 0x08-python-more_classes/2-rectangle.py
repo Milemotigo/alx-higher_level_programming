@@ -1,8 +1,13 @@
 #!/usr/bin/python3
+"""
+defining a rectangle class
+"""
 
 
 class Rectangle:
+    """ using the init method for initailizing the object atributes"""
     def __init__(self, width=0, height=0):
+        """setting the atribute to variable """
         self.height = height
         self.width = width
 
