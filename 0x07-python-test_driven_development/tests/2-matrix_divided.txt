@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+from 2-matrix_divided import *
+def matrix_div_test():
+    # Test valid input
+    matrix = [[1,2,3], [4,5,6]]
+    assert matrix_divided(matrix, 2) == [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+    # Test valid matrix input
+    matrix = "not a matrix"
+    try:
+        matrix_divided(matrix, 2)
+    except TypeError as  e:
+        assert str(e) == "matrix must be a matrix (list of list) of integers/float"
+    else:
+        raise AssertionError("Expected TypeError for invalid matrix input")
