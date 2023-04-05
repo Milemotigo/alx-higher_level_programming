@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Rectangle:
     def __init__(self, width=0, height=0):
         self.height = height
@@ -34,6 +35,5 @@ class Rectangle:
 
     def perimeter(self):
         if self.width == 0 or self.height == 0:
-            return  0
-
-        return 2 * (self.width + self.height)
+            return(0)
+        return 2*(self.width + self.height)
