@@ -3,6 +3,10 @@
 defines an empty rectangle
 
 """
+
+
 class Rectangle:
+
     """ Empty representation of a triangle """
+
     pass
