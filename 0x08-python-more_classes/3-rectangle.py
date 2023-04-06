@@ -9,6 +9,7 @@ class Rectangle:
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -20,18 +21,21 @@ class Rectangle:
     @property
     def height(self):
         return self.__height
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be greater >= 0")
-        self.__height =  value
+        self.__height = value
 
     def area(self):
         return self.__width * self.__height
+
     def perimeter(self):
         return 2*(self.__width) + 2*(self.__height)
+
     def __str__(self):
         """returns printable string representation of the rectangle"""
         string = ""
