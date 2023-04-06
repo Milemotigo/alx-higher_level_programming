@@ -8,7 +8,7 @@ class Rectangle:
     """ using the init method for initailizing the object atributes"""
 
 
-    Rectangle.number_of_instance = 0
+    number_of_instances = 0
 
 
     def __init__(self, width=0, height=0):
@@ -37,9 +37,9 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         elif value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
         else:
             self.__height = value
 
