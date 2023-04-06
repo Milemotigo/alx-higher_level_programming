@@ -5,8 +5,11 @@ defining a rectangle class
 
 
 class Rectangle:
-    number_of_instances = 0
     """ using the init method for initailizing the object atributes"""
+
+
+    Rectangle.number_of_instance = 0
+
     def __init__(self, width=0, height=0):
         """setting the atribute to variable """
         self.height = height
