@@ -23,11 +23,11 @@ def matrix_divided(matrix, div):
     for line in matrix:
         if not all([matrix]) or not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists) of \
-                    integers/floats.")
+                integers/floats.")
         if len(line) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
             for w in line:
                 if not isinstance(w, (int, float)):
                     raise TypeError("matrix must be a matrix (list of lists) of \
-                        integers/floats.")
+                            integers/floats.")
                     return [[round(w / div, 2) for w in line] for line in matrix]
