@@ -21,5 +21,5 @@ def matrix_divided(matrix, div):
         for ele in row:
             new_ele = round(ele / div, 2)
             new_row.append(new_ele)
-        new_matrix.append(new_row)
-    return new_matrix
+        sec_matrix.append(new_row)
+    return sec_matrix
