@@ -1,0 +1,14 @@
+from 1-my_list import MyList
+
+def test_print_sorted():
+    # Create a new MyList object with some unsorted integers
+    my_list = MyList([3, 2, 5, 1, 4])
+
+    # Call the print_sorted method
+    my_list.print_sorted()
+
+    # Check that the original list is unchanged
+    assert my_list == [3, 2, 5, 1, 4]
+
+    # Check that the printed list is sorted
+    assert my_list.print_sorted() == [1, 2, 3, 4, 5]
