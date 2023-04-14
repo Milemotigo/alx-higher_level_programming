@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module for is_same_class method
+"""
 
 
 def inherits_from(obj, a_class):
