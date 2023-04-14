@@ -1,4 +1,4 @@
-#!/usr/bin/ptthon3
+#!/usr/bin/python3
 '''module for empty class'''
 
 
