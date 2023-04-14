@@ -4,3 +4,6 @@
 
 class BaseGeometry:
     pass
+'''
+Write an empty class BaseGeometry.
+'''
