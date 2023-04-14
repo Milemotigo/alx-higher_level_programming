@@ -9,5 +9,5 @@ def is_same_class(obj, a_class):
         a_class (str): class criteria to validate.
     """
     if (type(obj) == a_class):
-        return True
-    return False
+        return (True)
+    return (False)
