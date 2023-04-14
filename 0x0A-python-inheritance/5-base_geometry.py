@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
+    '''
+    Write an empty class BaseGeometry.
+    '''
     pass
-'''
-Write an empty class BaseGeometry.
-'''
