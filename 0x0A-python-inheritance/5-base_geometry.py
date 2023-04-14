@@ -2,7 +2,7 @@
 '''module for empty class'''
 
 
-class BaseGeometry:
+class BaseGeometry():
     '''
     Write an empty class BaseGeometry.
     '''
