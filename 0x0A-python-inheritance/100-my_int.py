@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-'''
-Defines a class that inherit from the int and invert the == and
-!= to the default operator
-'''
+"""
+Contains definition of class MyInt
+"""
 
 
 class MyInt(int):
+    '''
+    Defines a class that inherit from the int and invert the == and
+    != to the default operator
+    '''
+
     def __eq__(self, other):
         '''
         Overide the default operator == and return the default behaviour
