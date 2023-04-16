@@ -3,10 +3,8 @@
 
 
 def read_file(filename=""):
+    '''opens file in write mode and prints it to the standard output'''
 
     with open(filename, 'r', encoding='utf-8') as f:
-        '''opens file in write mode and prints it to the standard output'''
-
-
         contents = f.read()
         print(contents)
