@@ -2,6 +2,7 @@
 '''Defines a string json file converter'''
 import json
 
+
 def to_json_string(my_obj):
     '''Return json representationnof an object
     Arg:
