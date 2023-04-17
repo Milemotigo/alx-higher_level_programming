@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-'''returns the dictionary description with simple data'''
+'''converts fron object to json'''
 import json
 
 
 def class_to_json(obj):
+    '''returns the dictionary description with simple data
+    Arg:
+        valid: returns a list of valid attributes and method
+        value: returns attribute of obj
+    '''
     Output = {}
 
     valid = dir(obj)
