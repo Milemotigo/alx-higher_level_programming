@@ -10,11 +10,11 @@ def class_to_json(obj):
         value: returns attribute of obj
     '''
     Output = {}
-
     valid = dir(obj)
+
     for attr in valid:
         value = getattr(obj, attr)
 
         if not callable(value) and not attr.startswith('__'):
             Output[attr] = value
-    return Output
+    return Output.__dict__
