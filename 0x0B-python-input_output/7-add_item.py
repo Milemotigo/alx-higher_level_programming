@@ -17,4 +17,5 @@ if __name__ == '__main__':
     if path.isfile(file_name):
         j_List = load_from_json_file(file_name)
         j_List.extend(sys.argv[1:])
+
         save_to_json_file(j_List, file_name)
