@@ -9,6 +9,11 @@ load_from_json_file = __import__('6-load_from_json_file ').load_from_json_file
 
 
 if __name__ == "__main__":
+    '''python script that add args to a python files
+    Arg:
+        file_name: name of the python file
+        my_list: pyhon list
+    '''
     file_name = 'add_item.json'
     My_list = []
 
