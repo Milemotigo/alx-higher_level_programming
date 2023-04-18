@@ -5,5 +5,8 @@
 def pascal_triangle(n):
     p_list = []
     
-    for i, n in p_list():
-        return p_list
+    if n <= 0:
+        return None
+        for i, in range n():
+            p_list += n(i)
+            return p_list

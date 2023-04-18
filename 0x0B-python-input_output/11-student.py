@@ -1,33 +1,31 @@
 #!/usr/bin/python3
-'''Defines a class student'''
+"""11-student.py: Student to disk and reload
+Defines a student based on 10-student.py
+"""
 
 
-class Student():
+class Student:
+    """ Defines a student class"""
+
     def __init__(self, first_name, last_name, age):
+        """Instatiation of the  Student class
+        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
-        def to_json(self, attrs=None):
-            """Initialize a new Student.
-            Args:
-                first_name (str): The first name of the student.
-                last_name (str): The last name of the student.
-                age (int): The age of the student.
-            """
-            if attrs is None:
-                return self.__dict__
-            else:
-                Retrieved = {}
-                for attr in attrs:
-                    if hasattr(self, attr):
-                        Retrieved[attr] = getattr(self, attr)
-                return Retrieved
+    def to_json(self, attrs=None):
+        """Accepts a dictionary representation of the Student object
+        If attrs is a list of strings, retrieve only attrs in the list
+        Otherwise, all attributes must be retrievd
+        """
+        if (type(attrs) == list and
+                all(type(ele) == str for ele in attrs)):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+        return self.__dict__
 
-        def reload_from_json(self, json):
-            """Replace all attributes of the Student.
-            Args:
-                json (dict): The key/value pairs to replace attributes with.
-            """
-            for key, value in json.items():
-                setattr(self, key, value)
+    def reload_from_json(self, json):
+        """Replaces all attributes of the Student.
+        """
+        for k, v in json.items():
+            setattr(self, k, v)
