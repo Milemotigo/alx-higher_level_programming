@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 
+
 class Base():
+'''A representation of the base of our OOP hierarchy.'''
 
     __nb_objects = 0
 
     def __init__(self, id=None):
+        '''constructor'''
+
         if id is not None:
             self.id = id
         else:
