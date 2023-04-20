@@ -84,3 +84,7 @@ class Rectangle(Base):
             raise ValueError('y must be >= 0')
         else:
             self.__y = value
+
+    def area(self):
+        ar = (self.__height * self.__width) + (self.__x * self.__y)
+        return(ar)
