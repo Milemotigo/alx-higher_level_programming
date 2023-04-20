@@ -91,5 +91,6 @@ class Rectangle(Base):
         return(ar)
 
     def display(self):
+        '''display a rectangle'''
         for i in range(self.__height):
             print('#' * self.__width)
