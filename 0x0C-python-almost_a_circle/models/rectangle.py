@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''inherit from base clase for rectangle'''
+'''creates a rectangle class'''
 
 
 from models.base import Base
@@ -7,6 +7,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    '''A representation of the rectange of our OOP hierarchy.'''
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize a new Rectangle.
         Args:
@@ -28,8 +30,8 @@ class Rectangle(Base):
         self.__y = y
 
     @property
-    """Set/get the width of the Rectangle."""
     def width(self):
+        """Set/get the width of the Rectangle."""
         return self.__width
 
     @width.setter
@@ -37,8 +39,8 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    """Set/get the width of the Rectangle."""
     def height(self):
+        """Set/get the width of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -46,18 +48,17 @@ class Rectangle(Base):
         self.__height = value
 
     @property
-    """Set/get the width of the Rectangle."""
     def x(self):
+        """Set/get the width of the Rectangle."""
         return self.__x
 
     @x.setter
-    """Set/get the width of the Rectangle."""
     def x(self, value):
         __self.x = value
 
     @property
-    """Set/get the width of the Rectangle."""
     def y(self):
+        """Set/get the width of the Rectangle."""
         return self.__y
 
     @y.setter
