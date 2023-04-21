@@ -112,6 +112,7 @@ class Rectangle(Base):
             print('')
 
     def update(self, *args):
+        '''displays rectangles and args'''
         arg = args
         if len(arg) >= 1:
             self.__id = arg[0]
