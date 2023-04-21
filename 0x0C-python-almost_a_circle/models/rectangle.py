@@ -111,7 +111,7 @@ class Rectangle(Base):
                 print('#', end='')
             print('')
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''displays rectangles and args
         Args:
             *args (ints): New attribute values.
@@ -135,3 +135,6 @@ class Rectangle(Base):
             self.__x = arg[3]
         if len(arg) >= 5:
             self.__y = arg[4]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
