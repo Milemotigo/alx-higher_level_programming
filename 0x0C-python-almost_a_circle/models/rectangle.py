@@ -123,6 +123,8 @@ class Rectangle(Base):
             **kwargs (dict): New key/value pairs of attributes.
         '''
         arg = args
+        if arg is None:
+            self.__init__(self.__width, self.__height, self.__x, self.__y)
         if len(arg) >= 1:
             self.__id = arg[0]
         if len(arg) >= 2:
