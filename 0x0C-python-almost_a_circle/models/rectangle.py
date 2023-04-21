@@ -103,10 +103,23 @@ class Rectangle(Base):
     def display(self):
         '''displays a rectangle and coordinates'''
         for i in range(self.__y):
-            print()
+            print('')
         for i in range(self.__height):
             for i in range(self.__x):
                 print(' ', end='')
             for i in range(self.__width):
                 print('#', end='')
-            print()
+            print('')
+
+    def update(self, *args):
+        arg = args
+        if len(arg) >= 1:
+            self.__id = arg[0]
+        if len(arg) >= 2:
+            self.__width = arg[1]
+        if len(arg) >= 3:
+            self.__height = arg[2]
+        if len(arg) >= 4:
+            self.__x = arg[3]
+        if len(arg) >= 5:
+            self.__y = arg[4]
