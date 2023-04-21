@@ -99,3 +99,14 @@ class Rectangle(Base):
         '''Returns a string representation of a rectangle'''
         return('[Rectangle] ({}) {}/{} - {}/{}'.format(
             self.id, self.__x,  self.__y, self.__width, self.__height))
+
+    def display(self):
+        '''displays a rectangle and coordinates'''
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for i in range(self.__x):
+                print(' ', end='')
+            for i in range(self.__width):
+                print('#', end='')
+            print()
