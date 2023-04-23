@@ -39,7 +39,7 @@ class Square(Rectangle):
         if len(arg) >= 1:
             self.id = arg[0]
         if len(arg) >= 2:
-            self.size =arg[1]
+            self.size = arg[1]
         if len(arg) >= 3:
             self.x = arg[2]
         if len(arg) >= 4:
@@ -65,4 +65,4 @@ class Square(Rectangle):
             "size": self.width,
             "x": self.x,
             "y": self.y
-        }
+            }
