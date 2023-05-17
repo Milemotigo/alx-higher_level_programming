@@ -1,4 +1,5 @@
 -- Insert into a 'table'
 
-CREATE TABLE                                                          first_table(                                                                  id INT,                                                               name VARCHAR(256)                                             );
-INSERT INTO value('Best School', 89):
+
+INSERT INTO CUSTOMERS (ID,NAME)
+VALUES (89, Best 'School' );
