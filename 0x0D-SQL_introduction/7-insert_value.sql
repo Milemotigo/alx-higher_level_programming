@@ -1,5 +1,5 @@
 -- Insert into a 'table'
 
 
-INSERT INTO CUSTOMERS (ID,NAME)
+INSERT INTO first_table (id,name)
 VALUES (89, Best 'School' );
