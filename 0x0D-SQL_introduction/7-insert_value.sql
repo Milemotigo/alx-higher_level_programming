@@ -1,11 +1,3 @@
 -- Insert into a 'table'
 
-INSERT INTO first_table(
-	id,
-	name
-)
-VALUES
-(
-	89,
-	'BEST SCHOOL'
-);
+INSERT INTO first_table value('Best School', 89):
