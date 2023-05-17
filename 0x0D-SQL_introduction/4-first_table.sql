@@ -1,3 +1,7 @@
 -- Create myfirst table
 
-CREATE TABLE IF NOT EXISTS first_table(mysql VARCHAR(256) id INT);
+CREATE TABLE
+first_table(
+	id INT,
+	name VARCHAR(256)
+);
