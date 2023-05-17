@@ -1,0 +1,1 @@
+SELECT {attribute}+ FROM {table}+ [ WHERE {boolean predicate to pick rows} ] [ ORDER BY {attribute}+ ];
