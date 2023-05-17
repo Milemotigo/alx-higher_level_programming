@@ -1,4 +1,4 @@
 -- display the number of records
 
-SELECT id
-FROM TABLE first_table;
+SELECT COUNT(id)
+FROM first_table;
