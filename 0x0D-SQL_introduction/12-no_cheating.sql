@@ -1,4 +1,4 @@
--- update the score
+-- update bob score
 
 UPDATE Bob
 SET score = 10
