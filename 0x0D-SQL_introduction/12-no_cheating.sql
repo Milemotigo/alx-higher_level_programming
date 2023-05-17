@@ -1,4 +1,4 @@
--- update bob score
+-- update Bob score
 
 UPDATE second_table
 SET score = 10
