@@ -1,4 +1,5 @@
 -- computes average score
 
 SELECT AVG(score)
-FROM second_table;
+FROM result
+WHERE second_table;
