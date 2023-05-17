@@ -1,5 +1,6 @@
 -- Lists all records of a table
 
-SELECT score As name
+SELECT score, name
 FROM second_table
+WHERE name
 ORDER BY score DESC;
