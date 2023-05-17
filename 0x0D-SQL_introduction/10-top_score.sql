@@ -1,4 +1,4 @@
--- Lists all record of the table
+-- Lists all record of the table order by score
 
 SELECT second_table.name, second_table.score
 FROM second_table
