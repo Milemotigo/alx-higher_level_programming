@@ -1,6 +1,5 @@
 -- Lists all records of a table
 
 SELECT score As name
-GROUP BY
-score,
-ORDER BY names DESC
+FROM second_table
+ORDER BY name DESC;
