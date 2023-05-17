@@ -1,5 +1,5 @@
 -- Removes all records
 
-SELECT score, name
-DELETE FROM second_table
-WHERE ORDER BY score <= 5;
+SELECT s.score, s.name
+DELETE FROM s.second_table s
+WHERE ORDER BY s.score <= 5;
