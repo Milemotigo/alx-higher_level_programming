@@ -1,3 +1,4 @@
 -- Insert into a 'table'
 
-INSERT INTO first_table value('Best School', 89):
+CREATE TABLE                                                          first_table(                                                                  id INT,                                                               name VARCHAR(256)                                             );
+INSERT INTO value('Best School', 89):
