@@ -1,4 +1,3 @@
--- script that lists all databases of your MySQL server
+-- Display databases
 
-USE hbtn_0c_0;
-show DATABASES;
+show databases
