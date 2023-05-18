@@ -3,3 +3,4 @@
 SELECT state, MAX(temperature) AS `Max_temp`
 FROM temperatures
 GROUP BY state
+ORDER BY state;
