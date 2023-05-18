@@ -7,6 +7,5 @@ CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities(
 	PRIMARY KEY(id) NOT NULL,
 	state_id INT NOT NULL,
 	FOREIGN KEY(state_id),
-	REFERENCES states(state_id) NOT NULL,
-	name VARCHAR(256)  NOT NULL
+	REFERENCES states(state_id) NOT NULL
 	);
