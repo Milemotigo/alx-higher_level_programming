@@ -1,5 +1,7 @@
--- Script that creates the table id_not_null
-CREATE TABLE IF NOT EXISTS hbtn_0d_usd.states(
+-- Script that creates hbtn_0d_usa
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+-- Script that creates the states
+CREATE TABLE IF NOT EXISTS hbtn_0d_usa.states(
 	id INT UNIQUE AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	name VARCHAR(256)  NOT NULL
 	);
