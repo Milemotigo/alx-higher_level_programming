@@ -1,4 +1,0 @@
-EXCEPTION
-try:
-except:
-finally

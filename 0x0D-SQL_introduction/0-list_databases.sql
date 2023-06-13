@@ -1,3 +1,0 @@
--- Display databases
-
-SHOW DATABASES
