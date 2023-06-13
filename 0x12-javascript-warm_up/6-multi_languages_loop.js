@@ -1,9 +1,8 @@
 #!/usr/bin/node
-// using an array of string and a loop 
+// using an array of string and a loop
 
-let myarray = ['C is fun', "Python is cool", "JavaScript is amazing"];
+const myarray = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 let i;
-for (i = 0; i < myarray.length; i++)
-{
-    console.log(myarray[i]);
+for (i = 0; i < myarray.length; i++) {
+  console.log(myarray[i]);
 }
