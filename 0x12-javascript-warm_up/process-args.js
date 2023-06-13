@@ -1,4 +1,5 @@
 // print process.argv
-Process.argv.forEach(element) => {
-  console.log(`${element}`);
+const comd = length.process.argv - 2;
+comd.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
 });
