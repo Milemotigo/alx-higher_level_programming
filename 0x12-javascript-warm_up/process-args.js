@@ -1,4 +1,4 @@
 // print process.argv
-Process.argv.array.array.forEach(element => {
+Process.argv.forEach(element) => {
   console.log(`${element}`);
 });
