@@ -10,7 +10,7 @@ function recursiveFunction(num) {
     return (num * recursiveFunction(num - 1));  
 }
 if (isNaN(num)) {
-    console.log("1");
+    console.log('1');
 }
 else {
     console.log(recursiveFunction(num));
