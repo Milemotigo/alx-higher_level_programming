@@ -7,7 +7,7 @@ const num2 = parseInt(args[1]);
 if (args.length <= 1) {
     console.log('NaN');
 }
-else if (!num1 || !num2) {;
+else if (!num1 || !num2) {
     console.log('NaN');
 }
 else {
