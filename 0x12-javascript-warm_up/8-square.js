@@ -4,7 +4,7 @@
 const args = process.argv.slice(2);
 const count = parseInt(args);
 
-if(!count) {
+if(count == null) {
     console.log("Missing size");
 }
 for (let i = 0; i < count; i++) {
