@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function len(str) {
+function len (str) {
   let count = 0;
   let char = str[count];
   while (char !== undefined) {
@@ -20,4 +20,3 @@ if (argCount === 0) {
 } else {
   console.log(`There are ${argCount} arguments`);
 }
-
