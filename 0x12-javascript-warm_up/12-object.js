@@ -1,6 +1,4 @@
 #!/usr/bin/node
-
-// prints a dict
 const myObject = {
   type: 'object',
   value: 12
