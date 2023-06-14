@@ -1,5 +1,6 @@
 #!/usr/bin/node
 
+// fisx
 function len(str) {
   let count = 0;
   let char = str[count];
