@@ -1,9 +1,7 @@
 #!/usr/bin/node
-
-// prints a dict
 const myObject = {
-    type: 'object',
-    value: 12
+  type: 'object',
+  value: 12
 };
 console.log(myObject);
 myObject.value = 18;
