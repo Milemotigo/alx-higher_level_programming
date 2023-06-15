@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// class rectangle
+// class Rectangle
 class Rectangle {
   constructor (w, h) {
     if (h >= 0 || w >= 0) {
