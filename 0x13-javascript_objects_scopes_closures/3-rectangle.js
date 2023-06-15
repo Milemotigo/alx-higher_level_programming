@@ -9,17 +9,10 @@ class Rectangle {
         }
     }
     print() {
-        let rectange = '';
-        let right = '';
-        for (let row = 0; row < this.height; row++)
-        {
-            for (let col = 0; col < this.width; col++)
-            {
-                rectange += 'X';
-            }
-            rectange += '';
+        let char = 'X';
+        for (let col = 0; col < this.height; col++) {
+            console.log(char.repeat(this.width));
         }
-        console.log(rectange);
     }
 }
 module.exports = Rectangle;
