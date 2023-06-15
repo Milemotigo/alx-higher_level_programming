@@ -17,7 +17,7 @@ class Rectangle {
             {
                 rectange += 'X';
             }
-            rectange += '\n';
+            rectange += '';
         }
         console.log(rectange);
     }
