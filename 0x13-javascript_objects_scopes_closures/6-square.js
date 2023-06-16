@@ -7,8 +7,8 @@ class Square extends SquareX {
       c = 'X';
     }
     for (let i = 0; i < this.height; i++) {
-      let s = c.repeat(this.width);
-      console.log(s);
+      let rec = c.repeat(this.width);
+      console.log(rec);
     }
   }
 }
