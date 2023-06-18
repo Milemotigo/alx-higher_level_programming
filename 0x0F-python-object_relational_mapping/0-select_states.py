@@ -9,7 +9,6 @@ db = MySQLdb.connect(
 )
 
 cursor = db.cursor()
-
 connect = "SELECT * FROM states ORDER BY states.id ASC"
 
 cursor.execute(connect)
