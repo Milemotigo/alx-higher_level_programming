@@ -1,14 +1,17 @@
 import MySQLdb
+import sys
 
-db = MySQLdb.connect(
-    host="localhost",
-    port=3306,
-    user="mysql username",
-    passwd="mysql password",
-    db="hbtn_0e_0_usa"
-)
+def accessdb(username, password, data_base)
+    d_base = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=username,
+        passwd=password,
+        db=data_base  
+        
+    )
 
-cursor = db.cursor()
+cursor = d_base.cursor()
 connect = "SELECT * FROM states ORDER BY states.id ASC"
 
 cursor.execute(connect)
@@ -20,3 +23,7 @@ for row in results:
 
 cursor.close()
 db.close()
+
+argv = sys.argv[1:]
+username, password, d_base = argv
+accessdb(username, password, db_name)
