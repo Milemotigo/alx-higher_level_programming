@@ -18,12 +18,12 @@ def accessdb(username, password, db_name):
         charset="utf8"
     )
 
-    cursor = db.cursor()
+    curs = db.cursor()
     connect = "SELECT * FROM states ORDER BY states.id ASC"
 
-    cursor.execute(connect)
+    curs.execute(connect)
 
-    results = cursor.fetchall()
+    results = curs.fetchall()
 
     for row in results:
         print(row)
