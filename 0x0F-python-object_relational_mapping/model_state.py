@@ -14,5 +14,5 @@ class State(Base):
     Class with id and name attributes of each state
     '''
 
-    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True, unique=True)
     name = Column(String(128), nullable=False)
