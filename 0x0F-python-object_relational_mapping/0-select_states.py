@@ -9,7 +9,7 @@ def accessdb(username, password, db_name):
         user=username,
         passwd=password,
         db=db_name,
-        charset="utf8"'
+        charset="utf8"
     )
 
     cursor = db.cursor()
