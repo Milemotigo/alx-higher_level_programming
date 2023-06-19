@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+'''accessing statesnin ascending order
+'''
 import MySQLdb
 import sys
 
