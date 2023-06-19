@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-'''accessing statesnin ascending order
+'''accessing states in ascending order
 '''
 import MySQLdb
 import sys
 
 
 def accessdb(username, password, db_name):
+    '''gain access
+    '''
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
