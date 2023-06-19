@@ -13,7 +13,7 @@ def accessdb(username, password, db_name):
     )
 
     cursor = db.cursor()
-    connect = "SELECT * FROM states ORDER BY states.id ASC"
+    connect = "SELECT * FROM states ORDER BINARY BY states.id ASC"
 
     cursor.execute(connect)
 
