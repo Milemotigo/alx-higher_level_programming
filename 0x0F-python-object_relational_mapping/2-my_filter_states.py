@@ -10,21 +10,25 @@ from sys import argv
 
 if __name__ == '__main__':
     """
-    Access to the database and get the states
-    from the database.
+    Access the database and retrieve the states.
     """
-    db = MySQLdb.connect(host="localhost", 
-            user=argv[1], 
-            port=3306, 
-            passwd=argv[2], 
-            db=argv[3], 
-            charset="utf8")
+    db = MySQLdb.connect(
+        host="localhost",
+        user=argv[1],
+        port=3306,
+        passwd=argv[2],
+        db=argv[3],
+        charset="utf8"
+    )
 
-    curs = db.cursor()
-    query = curs.execute("SELECT * FROM states \
-                 WHERE name LIKE BINARY 'N%' \
-                 ORDER BY states.id ASC")
-    rows = curs.fetchall()
+    cursor = db.cursor()
+    query = "SELECT * FROM states WHERE name LIKE 'A%' ORDER BY id ASC"
+    cursor.execute(query)
+
+    rows = cursor.fetchall()
 
     for row in rows:
         print(row)
+
+    cursor.close()
+    db.close()
