@@ -1,36 +1,30 @@
 #!/usr/bin/python3
-'''accessing states in ascending order
-'''
+"""
+This script lists all states with
+a `name` starting with the letter `N`
+from the database `hbtn_0e_0_usa`.
+"""
+
 import MySQLdb
-import sys
+from sys import argv
 
+if __name__ == '__main__':
+    """
+    Access to the database and get the states
+    from the database.
+    """
+    db = MySQLdb.connect(host="localhost",
+            user=argv[1],
+            port=3306,
+            passwd=argv[2],
+            db=argv[3],
+            charset="utf8")
 
-def accessdb(username, password, db_name):
-    '''gain access
-    '''
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=username,
-        passwd=password,
-        db=db_name
-    )
+    curs = db.cursor()
+    query = curs.execute("SELECT * FROM states \
+                 WHERE name LIKE BINARY 'N%' \
+                 ORDER BY states.id ASC")
+    rows = curs.fetchall()
 
-    cursor = db.cursor()
-    connect = "SELECT * FROM states ORDER BY states.id ASC"
-
-    cursor.execute(connect)
-
-    rows = cursor.fetchall()
-
-    for row in results:
-        print(rows)
-
-    cursor.close()
-    db.close()
-
-
-if __name__ == "__main__":
-    argv = sys.argv[1:]
-    username, password, db_name = argv
-    accessdb(username, password, db_name)
+    for row in rows:
+        print(row)
