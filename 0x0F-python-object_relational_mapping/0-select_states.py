@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import MySQLdb
 import sys
+
 
 def accessdb(username, password, db_name):
     db = MySQLdb.connect(
@@ -23,6 +24,7 @@ def accessdb(username, password, db_name):
 
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
