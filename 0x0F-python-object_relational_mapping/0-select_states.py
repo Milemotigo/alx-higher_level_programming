@@ -2,6 +2,7 @@
 import MySQLdb
 import sys
 
+
 def accessdb(username, password, db_name):
     db = MySQLdb.connect(
         host="localhost",
@@ -24,6 +25,7 @@ def accessdb(username, password, db_name):
 
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     argv = sys.argv[1:]
