@@ -7,6 +7,8 @@ import sys
 
 
 def accessdb(username, password, db_name):
+    '''connection
+    '''
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
