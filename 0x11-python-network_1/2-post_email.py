@@ -17,7 +17,9 @@ if __name__ == "__main__":
 
     data = email_encode
 
-    with urllib.request.urlopen(url, data) as response:
+    req  = urllib.request.Request(url, data)
+
+    with urllib.request.urlopen(req) as response:
         display_body = response
         print(display_body.decode("utf-8"))
 
