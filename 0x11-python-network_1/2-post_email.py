@@ -12,8 +12,8 @@ if __name__ == "__main__":
 
     #def send_email(url, email):
     url = sys.argv[1]
-    email_json = {"email": sys.argv[2]}
-    email_encode = urllib.parse.urlencode(email_json).encode("utf-8")
+    email_json = {"email": sys.argv[3]}
+    email_encode = urllib.parse.urlencode(email_json).encode("ascii")
 
     data = email_encode
 
