@@ -1,17 +1,26 @@
 #!/usr/bin/env python3
+'''
+Python script that takes in a URL and an email,
+sends a POST request to the passed URL with the email as a
+parameter, and displays the body of the response (decoded in utf-8)
+'''
 
-import urllib.parse
-import urllib.request
-import sys
+if __name__ == '__main__':
+    import urllib.parse
+    import urllib.request
+    import sys
 
-def send_email(url, email):
-    encoded_email = urllib.parse.urlencode({'email': email}).encode('utf-8')  # Encode the email as URL parameters
-    with urllib.request.urlopen(url, data=encoded_email) as response:
-        body = response.read().decode('utf-8')  # Decode the response body
 
-    print(body)
+    def send_email(url, email):
+        email_json = {"email": email}
+        email_encode = urllib.parse.urlencode(email_json).encode("utf-8")
+        data = email_encode
 
-if __name__ == "__main__":
+
+        with urllib.request.urlopen(url, data) as response:
+            display_body = response
+            print(display_body.decode("utf-8"))
+
     url = sys.argv[1]
     email = sys.argv[2]
     send_email(url, email)
