@@ -1,23 +1,21 @@
 #!/usr/bin/python3
-"""
-Python script that takes in a URL and an email,
-sends a POST request to the passed URL with the email as a
-parameter, and displays the body of the response (decoded in utf-8)
-"""
+""" 
+ This is MODULE:2 - This script takes in a URL + email, sends POST 
+ request to the passed URL with the email as a parameter, 
+ and displays the body of the response (decoded in utf-8) 
+ """
+import urllib.parse
+import urllib.request
+import sys
 
 if __name__ == "__main__":
-    import urllib.parse
-    import urllib.request
-    import sys
-
     def send_email(url, email):
         email_json = {"email": email}
-        email_encode = urllib.parse.urlencode(email_json).encode("utf-8")
+        email = urllib.parse.urlencode(email_json)
 
-        data = email_encode
-
-
-        with urllib.request.urlopen(url, data) as response:
+        data = email.encode("utf-8")
+        seek = url.request.Request(url, data)
+        with urllib.request.urlopen(seek) as response:
             display_body = response
             print(display_body.decode("utf-8"))
 
