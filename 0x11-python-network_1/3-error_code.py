@@ -1,19 +1,18 @@
 #!/usr/bin/python3
 '''
-Python script that takes in a URL, sends a request tothe url
+Python script that takes in a URL, sends a request to the URL
 '''
-if __name__ == "__main__":
-    import urllib.request
-    import sys
+import urllib.request
+import sys
 
+def display_url(url):
     try:
-        def take_url(url):
-            with urllib.request.urlopen(url) as resp:
-                headers = resp.info()
-                x_request_id = headers.get("X-Request-Id")
-                print(x_request_id)
+        with urllib.request.urlopen(url) as response:
+            result = response.read()
+            print(result.decode("utf-8"))
     except urllib.error.HTTPError as e:
-        print("Error code:{}".format(e.code))
+        print("Error code: {}".format(e.code))
 
+if __name__ == "__main__":
     url = sys.argv[1]
-    take_url(url)
+    display_url(url)
