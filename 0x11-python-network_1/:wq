@@ -7,7 +7,7 @@ if __name__ == "__main__":
     import sys
 
     try:
-        def display_url(url):
+        def take_url(url):
             with urllib.request.urlopen(url) as response:
                 result = response.read()
                 print(result.decode("utf-8"))
@@ -15,4 +15,4 @@ if __name__ == "__main__":
         print("Error code:{}".format(e.code))
 
     url = sys.argv[1]
-    display_url(url)
+    take_url(url)
