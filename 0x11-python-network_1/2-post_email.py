@@ -5,24 +5,17 @@ sends a POST request to the passed URL with the email as a
 parameter, and displays the body of the response (decoded in utf-8)
 """
 
-if __name__ == "__main__":
+if _name_ == "_main_":
+    import sys
     import urllib.parse
     import urllib.request
-    import sys
 
-    #def send_email(url, email):
-    url = sys.argv[1]
-    email_json = {"email": sys.argv[3]}
-    email_encode = urllib.parse.urlencode(email_json).encode("ascii")
+    url, email = sys.argv[1:3]
+    value = {"email": email}
 
-    data = email_encode
+    data = urllib.parse.urlencode(value).encode("ascii")
 
-    req  = urllib.request.Request(url, data)
+    req = urllib.request.Request(url, data)
 
-    with urllib.request.urlopen(req) as response:
-        display_body = response
-        print(display_body.decode("utf-8"))
-
-    #url = sys.argv[1]
-    #email = sys.argv[2]
-    #send_email(url, email)
+    with urllib.request.urlopen(req) as resp:
+        print(resp.read().decode("utf-8"))
