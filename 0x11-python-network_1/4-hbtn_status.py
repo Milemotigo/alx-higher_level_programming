@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 '''python script that fetches https://alx-intranet.hbtn.io/status
 '''
-import requests
+import urllib.request
 
 url = "https://alx-intranet.hbtn.io/status"
-response = requests.get(url)
+response = urllib.request.get(url)
 
 if response.status_code == 200:
     content = response.json()
