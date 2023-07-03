@@ -1,15 +1,13 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''python script that fetches https://alx-intranet.hbtn.io/status
 '''
-import urllib.request
+import requests
 
-url = "https://alx-intranet.hbtn.io/status"
-response = urllib.request.get(url)
+if __name__ == "__main__":
+    url = "https://alx-intranet.hbtn.io/status"
+    response = requests.get(url)
+    body = response.text
 
-if response.status_code == 200:
-    content = response.json()
     print("Body response:")
-    print("\t- type:", type(content))
-    print("\t- content:", content)
-else:
-    print("Error:", response.status_code)
+    print(f"    - type: {type(body)}")
+    print(f"    - content: {body}")
