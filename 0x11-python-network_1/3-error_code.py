@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-python script that takes in a URL, sends a request tothe url
+python script that takes in a URL, sends a request tothe urll
 '''
 if __name__ == "__main__":
     import urllib.request
