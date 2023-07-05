@@ -13,12 +13,11 @@ if __name__ == "__main__":
         email_json = {"email": email}
         email_encode = urllib.parse.urlencode(email_json)
 
-        data = email_encode.encode("utf-8")
-        seek = urllib.request.Request(url, data, method = 'POST')
+        prot = email_encode.encode("utf-8")
+        seek = urllib.request.Request("POST", url, prot = data)
         with urllib.request.urlopen(seek) as response:
             display_body = response
             print(display_body.decode("utf-8"))
-
 
     url = sys.argv[1]
     email = sys.argv[2]
