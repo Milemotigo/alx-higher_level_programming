@@ -11,10 +11,10 @@ if __name__ == "__main__":
 
     def send_email(url, email):
         email_json = {"email": email}
-        email = urllib.parse.urlencode(email_json)
+        email_encode = urllib.parse.urlencode(email_json)
 
-        data = email.encode("utf-8")
-        seek = url.request.Request(url, data = data, method = 'POST')
+        data = email_encode.encode("utf-8")
+        seek = urllib.request.Request(url, data, method = 'POST')
         with urllib.request.urlopen(seek) as response:
             display_body = response
             print(display_body.decode("utf-8"))
